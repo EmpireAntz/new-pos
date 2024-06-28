@@ -5,20 +5,6 @@
     text-align: center;
   }
   
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-  
-  
   body {
     display: flex;
     justify-content: center;
@@ -85,6 +71,43 @@
   .btn:hover {
     opacity: 0.8;
   }
+
+  .dashboard {
+  background-color: #f8f8f8;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header styling */
+.dashboard h1 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.dashboard button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transition: background 0.3s, border 0.3s;
+}
+
+/* Button hover effect */
+.dashboard button:hover {
+  background-color: #d4d4d4;
+  border: 2px solid #bbb;
+}
   
   @keyframes logo-spin {
     from {

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PinPad = () => {
     const [pin, setPin] = useState("");
+    const navigate = useNavigate();
   
     const handleButtonClick = (value) => {
       if (pin.length < 4) {
@@ -14,8 +16,12 @@ const PinPad = () => {
     };
   
     const handleEnter = () => {
-      console.log(`Entered PIN: ${pin}`);
-      setPin(""); // Clear the PIN after showing the alert
+      if (pin.length === 4) {
+        navigate('/dashboard', { state: { pin } });
+        setPin(""); // Clear the PIN after navigation
+      } else {
+        console.log('PIN must be 4 digits');
+      }
     };
   
     return (
