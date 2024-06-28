@@ -1,10 +1,11 @@
+import React from 'react';
+import TapToLogin from "../components/TapToLogin";
 
 const Home = () => {
-
-  return (
-    <div className="">
+    return <div>
+        <TapToLogin/>
     </div>
-  );
-};
 
-export default Home;
+}
+
+export default Home

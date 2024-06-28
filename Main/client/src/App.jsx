@@ -1,20 +1,21 @@
-import './App.css';
-import { Outlet } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
+import React from 'react';
+import { useState } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css'
+import MainPage from './pages/Home'
+import PinPad from './components/PinPad';
+
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <div className="">
-        <Outlet />
-      </div>
-    </ApolloProvider>
-  );
+    <Router>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/pinpad" element={<PinPad />} />
+    </Routes>
+  </Router>
+  )
 }
 
-export default App;
+export default App
